@@ -23,6 +23,8 @@ import logging
 import logging.handlers
 import os
 
+
+
 # create logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -70,7 +72,9 @@ session.headers.update({
 })
 
 #Getting the info for game 1426210
-r = session.get('https://store.steampowered.com/api/appdetails?appids=1426210', cookies=cookies)
+r = session.post("https://store.steampowered.com/api/appdetails?appids=1426210", cookies=cookies)
+print("This is the post request: ", r.status_code)
+r = session.get('https://store.steampowered.com/api/appdetails?appids=1426210')
 r_json = r.json()
 
 
