@@ -65,7 +65,8 @@ def send_email(game, price):
         smtp.sendmail(email_sender, email_receiver, msg.as_string())
 
 cookies = {'steamCountry': 'TW%7C6b3e2467d2049673f0bab34a1dec806d'}
-
+cookies2 = {'browserid': '2921198029950988778'}
+cookies3 = {'steamLoginSecure': '76561199160398054'}
 session = requests.Session()
 session.headers.update({
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
@@ -73,7 +74,11 @@ session.headers.update({
 
 #Getting the info for game 1426210
 r = session.post("https://store.steampowered.com/api/appdetails?appids=1426210", cookies=cookies)
-print("This is the post request: ", r.status_code)
+print("This is the frist post request: ", r.status_code)
+r = session.post("https://store.steampowered.com/api/appdetails?appids=1426210", cookies=cookies2)
+print("This is the second post request: ", r.status_code)
+r = session.post("https://store.steampowered.com/api/appdetails?appids=1426210", cookies=cookies3)
+print("This is the third post request: ", r.status_code)
 r = session.get('https://store.steampowered.com/api/appdetails?appids=1426210')
 r_json = r.json()
 
