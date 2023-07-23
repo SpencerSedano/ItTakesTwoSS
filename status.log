@@ -17,7 +17,12 @@
 >>>>>>> 2a167829a1d832cc591bc5147f10833719647394
 2023-07-23 18:17:27,392 - __main__ - INFO - Token value: Token not available
 2023-07-23 18:18:54,011 - __main__ - INFO - Token value: Token not available
+<<<<<<< HEAD
 2023-07-23 19:28:11,337 - __main__ - INFO - Token value: Token not available
 2023-07-23 19:28:43,002 - __main__ - INFO - Token value: Token not available
 2023-07-23 19:32:21,041 - __main__ - INFO - Token value: Token not available
 2023-07-23 19:32:25,943 - __main__ - INFO - Token value: Token not available
+=======
+2023-07-23 10:47:42,223 - __main__ - INFO - Token value: 1234
+2023-07-23 11:08:54,617 - __main__ - INFO - Token value: 1234
+>>>>>>> a021496eaade575bec93e72d839d66ec3125c62e
