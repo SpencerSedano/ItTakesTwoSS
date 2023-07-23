@@ -62,7 +62,7 @@ def send_email(game, price):
         smtp.login(email_sender, email_password)
         smtp.sendmail(email_sender, email_receiver, msg.as_string())
 
-cookies = {'sessionid': '56456fbc97e725a590ce1376'}
+cookies = {'browserid': '2998885202193041874'}
 
 session = requests.Session()
 session.headers.update({
