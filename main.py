@@ -62,7 +62,7 @@ def send_email(game, price):
         smtp.login(email_sender, email_password)
         smtp.sendmail(email_sender, email_receiver, msg.as_string())
 
-cookies = {'browserid': '2998885202193041874'}
+cookies = {'steamCountry': 'TW'}
 
 session = requests.Session()
 session.headers.update({
