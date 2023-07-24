@@ -64,19 +64,19 @@ def send_email(game, price):
         smtp.login(email_sender, email_password)
         smtp.sendmail(email_sender, email_receiver, msg.as_string())
 
-cookies = {'steamCountry': 'TW%7C6b3e2467d2049673f0bab34a1dec806d'}
-cookies2 = {'browserid': '2921198029950988778'}
-cookies3 = {'steamLoginSecure': '76561199160398054'}
+#cookies = {'steamCountry': 'TW%7C6b3e2467d2049673f0bab34a1dec806d'}
+#cookies2 = {'browserid': '2921198029950988778'}
+cookies3 = {'steamLoginSecure': '76561199160398054%7C%7CeyAidHlwIjogIkpXVCIsICJhbGciOiAiRWREU0EiIH0.eyAiaXNzIjogInI6MEQwQl8yMkUwQjVBMl9DMjk4OSIsICJzdWIiOiAiNzY1NjExOTkxNjAzOTgwNTQiLCAiYXVkIjogWyAid2ViIiBdLCAiZXhwIjogMTY5MDE5MzI3MCwgIm5iZiI6IDE2ODE0NjY0NTYsICJpYXQiOiAxNjkwMTA2NDU2LCAianRpIjogIjBEMUNfMjJFMEI1QTBfOTZBMTgiLCAib2F0IjogMTY5MDEwNjQ1NiwgInJ0X2V4cCI6IDE3MDg2OTM2ODgsICJwZXIiOiAwLCAiaXBfc3ViamVjdCI6ICIzOS4xNS40OS4xNzUiLCAiaXBfY29uZmlybWVyIjogIjM5LjE1LjQ5LjE3NSIgfQ.aqT4pemtwt2f3oRP3gxJ9OxA4Mzy-YsUxtDupQ7cFMf7cBaj_clSILIfcFj58RB_bJWIik6FVJ8Pyim2bbDnDg'}
 session = requests.Session()
 session.headers.update({
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
 })
 
 #Getting the info for game 1426210
-r = session.post("https://store.steampowered.com/api/appdetails?appids=1426210", cookies=cookies)
-print("This is the frist post request: ", r.status_code)
-r = session.post("https://store.steampowered.com/api/appdetails?appids=1426210", cookies=cookies2)
-print("This is the second post request: ", r.status_code)
+#r = session.post("https://store.steampowered.com/api/appdetails?appids=1426210", cookies=cookies)
+#print("This is the frist post request: ", r.status_code)
+#r = session.post("https://store.steampowered.com/api/appdetails?appids=1426210", cookies=cookies2)
+#print("This is the second post request: ", r.status_code)
 r = session.post("https://store.steampowered.com/api/appdetails?appids=1426210", cookies=cookies3)
 print("This is the third post request: ", r.status_code)
 r = session.get('https://store.steampowered.com/api/appdetails?appids=1426210')
