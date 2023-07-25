@@ -45,9 +45,9 @@ except KeyError:
 
 
 def send_email(game, price):
-    email_sender = 'spencer.sv20@gmail.com'
-    email_password = 'omvsotnnnwqxhwus'
-    email_receiver = 'yuqinghao777@gmail.com'
+    email_sender = 'email'
+    email_password = 'password'
+    email_receiver = 'email'
 
     subject = f'Steam {game} price is lower!'
     body = f'Now {game} is {price}'
